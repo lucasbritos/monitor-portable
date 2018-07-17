@@ -1,0 +1,38 @@
+version: '3'
+services:
+  telegraf:
+    container_name: telegraf
+    image: "telegraf:latest"
+    volumes:
+      - ${PWD}/telegraf/mibs:/usr/share/mibs/site
+      - ${PWD}/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
+      - ${PWD}/telegraf/telegraf.d:/etc/telegraf/telegraf.d
+    command: --config-directory /etc/telegraf/telegraf.d
+    restart: always
+
+  influxdb:
+    container_name: influxdb
+    image: "influxdb:latest"
+    ports:
+      - "8083:8083"
+      - "8086:8086"
+    volumes:
+      - ${PWD}/influxdb/data:/var/lib/influxdb
+      - ${PWD}/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf
+    restart: always
+
+  grafana:
+    container_name: grafana
+    image: "grafana/grafana:latest"
+    ports:
+    - "3000:3000"
+    volumes:
+    - grafana-storage:/var/lib/grafana
+    restart: always
+
+volumes:
+  grafana-storage:
+
+
+networks:
+  default:
