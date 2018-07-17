@@ -12,7 +12,7 @@ Pre-requisites:
 
 ### Step 1: Install
 
-git clone https://github.com/lucasbritos/portable-monitor.git
+git clone https://github.com/lucasbritos/monitor-portable.git
 
 ### Step 2: Compose
 
