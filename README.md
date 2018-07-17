@@ -1,5 +1,7 @@
 ## Portable Monitor
 
+Dockerized stack monitoring system for general purposes. Intended to be small and portable.
+
 ### Step 1:
 
 git clone https://github.com/lucasbritos/portable-monitor.git
