@@ -1,4 +1,4 @@
-## Portable Monitor
+## monitor-portable
 
 Dockerized stack monitoring system for general purposes. Intended to be small and portable.
 
