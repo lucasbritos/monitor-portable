@@ -6,13 +6,15 @@ Dockerized stack monitoring system for general purposes. Intended to be small an
 - InfluxDB: Modern time series database
 - Grafana: Multi-source visualization tool
 
+Pre-requisites:
+- docker
+- docker-compose
 
-### Step 1:
+### Step 1: Install
 
 git clone https://github.com/lucasbritos/portable-monitor.git
 
-
-### Step 2:
+### Step 2: Compose
 
 docker-compose up --no-start <br />
 docker-compose start <br />
@@ -22,12 +24,7 @@ Starting influxdb ... done <br />
 Starting grafana  ... done <br />
 
 
-### Step 3:
-
-http://Server-IP:3000 <br />
-Login: admin/admin (change password) <br />
-
-### Step 4:
+### Step 3: Telegraf config
 
 Add some telegraf config files at telegraf/telegraf.d folder <br />
 You have some examples at telegraf/examples <br />
@@ -38,15 +35,19 @@ docker-compose restart telegraf<br />
 <br />
 Dont forget to configure snmp community on devices <br />
 
-### Step 5
+
+### Step 3: Grafana config
+
+http://Server-IP:3000 <br />
+Login: admin/admin (change password) <br />
 
 Import some dashboards, you have some examples on grafana/dashboard_examples folder
 
-### Useful commands
+#### Useful commands
 
-docker-compose down -v
+docker-compose down -v (Delete all containers and volumes)
 
-### TODO
+#### TODO
 
 - Configure Retention policies - Continous Querys on DB
 
