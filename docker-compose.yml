@@ -13,9 +13,6 @@ services:
   influxdb:
     container_name: influxdb
     image: "influxdb:latest"
-    ports:
-      - "8083:8083"
-      - "8086:8086"
     volumes:
       - ${PWD}/influxdb/data:/var/lib/influxdb
       - ${PWD}/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf
@@ -27,6 +24,7 @@ services:
     ports:
     - "3000:3000"
     volumes:
+    - ${PWD}/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
     - grafana-storage:/var/lib/grafana
     restart: always
 

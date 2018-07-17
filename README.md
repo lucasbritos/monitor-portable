@@ -2,6 +2,11 @@
 
 Dockerized stack monitoring system for general purposes. Intended to be small and portable.
 
+- telegraf: SNMP Polling agent
+- InfluxDB: Modern time series database
+- Grafana: Multi-source visualization tool
+
+
 ### Step 1:
 
 git clone https://github.com/lucasbritos/portable-monitor.git
@@ -33,18 +38,7 @@ docker-compose restart telegraf<br />
 <br />
 Dont forget to configure snmp community on devices <br />
 
-### Step 5:
-
-Add grafana source. All default, except: <br />
-
-Name: telegraf <br />
-Type: InfluxDB <br />
-URL: http://influxdb:8086 <br />
-Database:telegraf <br />
-<br />
-NOTE: Dont worry about: "database not found: telegraf" for now. Wait 5 minutes at least.<br />
-
-### Step 6
+### Step 5
 
 Import some dashboards, you have some examples on grafana/dashboard_examples folder
 
