@@ -45,7 +45,8 @@ Import some dashboards, you have some examples on grafana/dashboard_examples fol
 
 #### Useful commands
 
-docker-compose down -v (Delete all containers and volumes)
+- docker-compose down -v (Delete all containers and volumes)
+- iptables -I DOCKER-USER -i ext_if ! -s X.X.X.X/24 -j DROP (to add rule to avoid external exposure, DOCKER-USER chain shoulb be manually created before docker starts) 
 
 #### TODO
 
