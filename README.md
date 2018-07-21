@@ -5,6 +5,7 @@ Dockerized stack monitoring system for general purposes. Intended to be small an
 - telegraf: SNMP Polling agent
 - InfluxDB: Modern time series database
 - Grafana: Multi-source visualization tool
+- cAdvisor: Monitoring agent for containers and hosts
 
 Pre-requisites:
 - docker
@@ -36,7 +37,7 @@ docker-compose restart telegraf<br />
 Dont forget to configure snmp community on devices <br />
 
 
-### Step 3: Grafana config
+### Step 4: Grafana config
 
 http://Server-IP:3000 <br />
 Login: admin/admin (change password) <br />

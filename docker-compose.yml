@@ -13,10 +13,22 @@ services:
   influxdb:
     container_name: influxdb
     image: "influxdb:latest"
+    environment:
+      - INFLUXDB_DB=cadvisor
     volumes:
       - ${PWD}/influxdb/data:/var/lib/influxdb
       - ${PWD}/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf
     restart: always
+
+  cadvisor:
+    image: google/cadvisor
+    container_name: cadvisor
+    command: -storage_driver=influxdb -storage_driver_db=cadvisor -storage_driver_host=influxdb:8086
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
 
   grafana:
     container_name: grafana

@@ -1,0 +1,15 @@
+# config file version
+apiVersion: 1
+
+datasources:
+- name: telegraf
+  type: influxdb
+  access: proxy
+  orgId: 1
+  url: http://influxdb:8086
+  database: cadvisor
+  basicAuth: false
+  withCredentials: false
+  isDefault: true
+  version: 1
+  editable: false
