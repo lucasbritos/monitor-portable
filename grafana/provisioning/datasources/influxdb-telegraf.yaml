@@ -13,3 +13,4 @@ datasources:
   isDefault: true
   version: 1
   editable: false
+  timeInterval: 5m

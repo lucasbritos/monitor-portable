@@ -2,7 +2,7 @@
 apiVersion: 1
 
 datasources:
-- name: telegraf
+- name: cadvisor
   type: influxdb
   access: proxy
   orgId: 1
@@ -10,6 +10,6 @@ datasources:
   database: cadvisor
   basicAuth: false
   withCredentials: false
-  isDefault: true
+  isDefault: false
   version: 1
   editable: false
