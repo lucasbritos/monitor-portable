@@ -8,7 +8,6 @@ Dockerized stack monitoring system for general purposes. Intended to be small an
 - Elasticsearch: Modern Search-text engine
 - Grafana: Multi-source visualization tool
 - cAdvisor: Monitoring agent for containers and hosts
-- 
 
 Pre-requisites:
 - docker
@@ -48,7 +47,7 @@ Import some dashboards, you have some examples on grafana/dashboard_examples fol
 
 ### Step 5: Logstash config
 
-Add some logstash config files at logstash/conf.d folder <br />    
+Add some logstash config files at logstash/conf.d folder <br />
 You have some examples at logstash/examples <br />
 <br />
 You DONT need to restart logstash each time you change config<br />
