@@ -51,6 +51,9 @@ Add some logstash config files at logstash/conf.d folder <br />
 You have some examples at logstash/examples <br />
 <br />
 You DONT need to restart logstash each time you change config<br />
+<br />
+Dont forget to configure syslog towards UDP:1514 on devices<br />
+
 
 #### Useful commands
 
