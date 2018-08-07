@@ -2,10 +2,13 @@
 
 Dockerized stack monitoring system for general purposes. Intended to be small and portable.
 
-- telegraf: SNMP Polling agent
+- Telegraf: SNMP Polling agent
+- Logstash: Procesing agent for syslog, IPFIX, etc
 - InfluxDB: Modern time series database
+- Elasticsearch: Modern Search-text engine
 - Grafana: Multi-source visualization tool
 - cAdvisor: Monitoring agent for containers and hosts
+- 
 
 Pre-requisites:
 - docker
@@ -27,7 +30,7 @@ Starting grafana  ... done <br />
 
 ### Step 3: Telegraf config
 
-Add some telegraf config files at telegraf/telegraf.d folder <br />
+Add some telegraf config files at telegraf/conf.d folder <br />
 You have some examples at telegraf/examples <br />
 <br />
 You need to restart telegraf each time you change config<br />
@@ -36,13 +39,19 @@ docker-compose restart telegraf<br />
 <br />
 Dont forget to configure snmp community on devices <br />
 
-
 ### Step 4: Grafana config
 
 http://Server-IP:3000 <br />
 Login: admin/admin (change password) <br />
 
 Import some dashboards, you have some examples on grafana/dashboard_examples folder
+
+### Step 5: Logstash config
+
+Add some logstash config files at logstash/conf.d folder <br />    
+You have some examples at logstash/examples <br />
+<br />
+You DONT need to restart logstash each time you change config<br />
 
 #### Useful commands
 
@@ -52,4 +61,4 @@ Import some dashboards, you have some examples on grafana/dashboard_examples fol
 #### TODO
 
 - Configure Retention policies - Continous Querys on DB
-
+- IPFIX Examples
