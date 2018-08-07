@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "5.1.3"
+      "version": "5.2.1"
     },
     {
       "type": "panel",
@@ -46,7 +46,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1531767632917,
+  "iteration": 1533681750568,
   "links": [],
   "panels": [
     {
@@ -104,7 +104,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_agent_host | $tag_name",
+          "alias": "$tag_hostname | $tag_name",
           "groupBy": [
             {
               "params": [
@@ -114,7 +114,7 @@
             },
             {
               "params": [
-                "agent_host"
+                "hostname"
               ],
               "type": "tag"
             },
@@ -164,9 +164,9 @@
           ],
           "tags": [
             {
-              "key": "agent_host",
+              "key": "hostname",
               "operator": "=~",
-              "value": "/^$agent_host$/"
+              "value": "/^$hostname$/"
             },
             {
               "condition": "AND",
@@ -258,7 +258,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_agent_host | $tag_name",
+          "alias": "$tag_hostname | $tag_name",
           "groupBy": [
             {
               "params": [
@@ -268,7 +268,7 @@
             },
             {
               "params": [
-                "agent_host"
+                "hostname"
               ],
               "type": "tag"
             },
@@ -318,9 +318,9 @@
           ],
           "tags": [
             {
-              "key": "agent_host",
+              "key": "hostname",
               "operator": "=~",
-              "value": "/^$agent_host$/"
+              "value": "/^$hostname$/"
             },
             {
               "condition": "AND",
@@ -412,7 +412,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_agent_host | $tag_name",
+          "alias": "$tag_hostname | $tag_name",
           "groupBy": [
             {
               "params": [
@@ -422,7 +422,7 @@
             },
             {
               "params": [
-                "agent_host"
+                "hostname"
               ],
               "type": "tag"
             },
@@ -472,9 +472,9 @@
           ],
           "tags": [
             {
-              "key": "agent_host",
+              "key": "hostname",
               "operator": "=~",
-              "value": "/^$agent_host$/"
+              "value": "/^$hostname$/"
             },
             {
               "condition": "AND",
@@ -566,7 +566,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_agent_host | $tag_name",
+          "alias": "$tag_hostname | $tag_name",
           "groupBy": [
             {
               "params": [
@@ -576,7 +576,7 @@
             },
             {
               "params": [
-                "agent_host"
+                "hostname"
               ],
               "type": "tag"
             },
@@ -626,9 +626,9 @@
           ],
           "tags": [
             {
-              "key": "agent_host",
+              "key": "hostname",
               "operator": "=~",
-              "value": "/^$agent_host$/"
+              "value": "/^$hostname$/"
             },
             {
               "condition": "AND",
@@ -720,7 +720,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_agent_host | $tag_name",
+          "alias": "$tag_hostname | $tag_name",
           "groupBy": [
             {
               "params": [
@@ -730,7 +730,7 @@
             },
             {
               "params": [
-                "agent_host"
+                "hostname"
               ],
               "type": "tag"
             },
@@ -774,9 +774,9 @@
           ],
           "tags": [
             {
-              "key": "agent_host",
+              "key": "hostname",
               "operator": "=~",
-              "value": "/^$agent_host$/"
+              "value": "/^$hostname$/"
             },
             {
               "condition": "AND",
@@ -868,7 +868,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_agent_host | $tag_name",
+          "alias": "$tag_hostname | $tag_name",
           "groupBy": [
             {
               "params": [
@@ -878,7 +878,7 @@
             },
             {
               "params": [
-                "agent_host"
+                "hostname"
               ],
               "type": "tag"
             },
@@ -922,9 +922,9 @@
           ],
           "tags": [
             {
-              "key": "agent_host",
+              "key": "hostname",
               "operator": "=~",
-              "value": "/^$agent_host$/"
+              "value": "/^$hostname$/"
             },
             {
               "condition": "AND",
@@ -1016,7 +1016,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_agent_host | $tag_name",
+          "alias": "$tag_hostname | $tag_name",
           "groupBy": [
             {
               "params": [
@@ -1026,7 +1026,7 @@
             },
             {
               "params": [
-                "agent_host"
+                "hostname"
               ],
               "type": "tag"
             },
@@ -1070,9 +1070,9 @@
           ],
           "tags": [
             {
-              "key": "agent_host",
+              "key": "hostname",
               "operator": "=~",
-              "value": "/^$agent_host$/"
+              "value": "/^$hostname$/"
             },
             {
               "condition": "AND",
@@ -1164,7 +1164,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_agent_host | $tag_name",
+          "alias": "$tag_hostname | $tag_name",
           "groupBy": [
             {
               "params": [
@@ -1174,7 +1174,7 @@
             },
             {
               "params": [
-                "agent_host"
+                "hostname"
               ],
               "type": "tag"
             },
@@ -1218,9 +1218,9 @@
           ],
           "tags": [
             {
-              "key": "agent_host",
+              "key": "hostname",
               "operator": "=~",
-              "value": "/^$agent_host$/"
+              "value": "/^$hostname$/"
             },
             {
               "condition": "AND",
@@ -1312,7 +1312,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_agent_host | $tag_name",
+          "alias": "$tag_hostname | $tag_name",
           "groupBy": [
             {
               "params": [
@@ -1322,7 +1322,7 @@
             },
             {
               "params": [
-                "agent_host"
+                "hostname"
               ],
               "type": "tag"
             },
@@ -1366,9 +1366,9 @@
           ],
           "tags": [
             {
-              "key": "agent_host",
+              "key": "hostname",
               "operator": "=~",
-              "value": "/^$agent_host$/"
+              "value": "/^$hostname$/"
             },
             {
               "condition": "AND",
@@ -1460,7 +1460,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_agent_host | $tag_name",
+          "alias": "$tag_hostname | $tag_name",
           "groupBy": [
             {
               "params": [
@@ -1470,7 +1470,7 @@
             },
             {
               "params": [
-                "agent_host"
+                "hostname"
               ],
               "type": "tag"
             },
@@ -1514,9 +1514,9 @@
           ],
           "tags": [
             {
-              "key": "agent_host",
+              "key": "hostname",
               "operator": "=~",
-              "value": "/^$agent_host$/"
+              "value": "/^$hostname$/"
             },
             {
               "condition": "AND",
@@ -1582,7 +1582,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -1618,7 +1618,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -1628,7 +1628,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -1672,9 +1672,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -1730,7 +1730,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -1766,7 +1766,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -1776,7 +1776,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -1820,9 +1820,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -1878,7 +1878,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -1914,7 +1914,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -1924,7 +1924,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -1968,9 +1968,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -2026,7 +2026,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -2062,7 +2062,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -2072,7 +2072,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -2116,9 +2116,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -2174,7 +2174,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -2210,7 +2210,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -2220,7 +2220,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -2264,9 +2264,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -2322,7 +2322,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -2358,7 +2358,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -2368,7 +2368,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -2412,9 +2412,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -2470,7 +2470,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -2506,7 +2506,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -2516,7 +2516,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -2560,9 +2560,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -2618,7 +2618,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -2654,7 +2654,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -2664,7 +2664,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -2708,9 +2708,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -2780,7 +2780,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -2816,7 +2816,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -2826,7 +2826,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -2870,9 +2870,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -2928,7 +2928,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -2964,7 +2964,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -2974,7 +2974,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -3018,9 +3018,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -3076,7 +3076,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -3112,7 +3112,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -3122,7 +3122,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -3166,9 +3166,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -3224,7 +3224,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -3260,7 +3260,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -3270,7 +3270,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -3314,9 +3314,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -3372,7 +3372,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -3408,7 +3408,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -3418,7 +3418,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -3462,9 +3462,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -3520,7 +3520,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -3556,7 +3556,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -3566,7 +3566,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -3610,9 +3610,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -3668,7 +3668,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -3704,7 +3704,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -3714,7 +3714,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -3758,9 +3758,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -3816,7 +3816,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -3852,7 +3852,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -3862,7 +3862,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -3906,9 +3906,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -3964,7 +3964,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -4000,7 +4000,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -4010,7 +4010,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -4054,9 +4054,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -4112,7 +4112,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -4148,7 +4148,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -4158,7 +4158,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -4202,9 +4202,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -4260,7 +4260,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -4296,7 +4296,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -4306,7 +4306,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -4350,9 +4350,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -4408,7 +4408,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -4444,7 +4444,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -4454,7 +4454,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -4498,9 +4498,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -4556,7 +4556,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -4592,7 +4592,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -4602,7 +4602,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -4646,9 +4646,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -4704,7 +4704,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -4740,7 +4740,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -4750,7 +4750,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -4794,9 +4794,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -4852,7 +4852,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -4888,7 +4888,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -4898,7 +4898,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -4942,9 +4942,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -5000,7 +5000,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "telegraf",
+          "datasource": "${DS_TELEGRAF}",
           "fill": 1,
           "gridPos": {
             "h": 7,
@@ -5036,7 +5036,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$tag_agent_host | $tag_name",
+              "alias": "$tag_hostname | $tag_name",
               "groupBy": [
                 {
                   "params": [
@@ -5046,7 +5046,7 @@
                 },
                 {
                   "params": [
-                    "agent_host"
+                    "hostname"
                   ],
                   "type": "tag"
                 },
@@ -5090,9 +5090,9 @@
               ],
               "tags": [
                 {
-                  "key": "agent_host",
+                  "key": "hostname",
                   "operator": "=~",
-                  "value": "/^$agent_host$/"
+                  "value": "/^$hostname$/"
                 },
                 {
                   "condition": "AND",
@@ -5162,9 +5162,9 @@
         "includeAll": true,
         "label": null,
         "multi": true,
-        "name": "agent_host",
+        "name": "hostname",
         "options": [],
-        "query": "SHOW TAG VALUES ON telegraf FROM \"channel\" WITH KEY = agent_host",
+        "query": "SHOW TAG VALUES ON telegraf FROM \"channel\" WITH KEY = hostname",
         "refresh": 1,
         "regex": "",
         "sort": 0,
@@ -5184,7 +5184,7 @@
         "multi": true,
         "name": "channel",
         "options": [],
-        "query": "SHOW TAG VALUES ON telegraf FROM \"channel\" WITH KEY = \"name\" WHERE agent_host =~ /$agent_host/",
+        "query": "SHOW TAG VALUES ON telegraf FROM \"channel\" WITH KEY = \"name\" WHERE hostname =~ /$hostname/",
         "refresh": 1,
         "regex": "",
         "sort": 0,
@@ -5227,6 +5227,6 @@
   },
   "timezone": "",
   "title": "Channels",
-  "uid": "5cA1hUIiz",
-  "version": 27
+  "uid": "5cA1hUIia",
+  "version": 2
 }

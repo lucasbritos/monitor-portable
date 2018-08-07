@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "5.1.3"
+      "version": "5.2.1"
     },
     {
       "type": "panel",
@@ -46,7 +46,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1531767731296,
+  "iteration": 1533682397071,
   "links": [],
   "panels": [
     {
@@ -331,5 +331,5 @@
   "timezone": "",
   "title": "VMware",
   "uid": "eJQRXqNmk",
-  "version": 6
+  "version": 1
 }

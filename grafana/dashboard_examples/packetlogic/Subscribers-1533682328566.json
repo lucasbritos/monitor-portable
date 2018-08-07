@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "5.1.3"
+      "version": "5.2.1"
     },
     {
       "type": "panel",
@@ -63,16 +63,364 @@
     },
     {
       "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DS_TELEGRAF}",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "id": 14,
+      "interval": "5m",
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "max": true,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "/Limit/",
+          "dashes": true,
+          "fill": 0
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "$tag_hostname",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "hostname"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "model",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Model, Object count, subscriber"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "hostname",
+              "operator": "=~",
+              "value": "/PSM/"
+            }
+          ]
+        },
+        {
+          "alias": "$tag_hostname Limit",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "hostname"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "model",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Model, Max object count, subscriber"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Subscribers count",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DS_TELEGRAF}",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 1
+      },
+      "id": 15,
+      "interval": "5m",
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "max": true,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "/Limit/",
+          "dashes": true,
+          "fill": 0
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "$tag_hostname",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "hostname"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "model",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Model, Object count, session"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "$tag_hostname Limit",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "hostname"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "model",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Model, Max object count, session"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Sessions count",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
       "bars": true,
       "dashLength": 10,
       "dashes": false,
       "datasource": "${DS_TELEGRAF}",
       "fill": 1,
       "gridPos": {
-        "h": 9,
+        "h": 7,
         "w": 24,
         "x": 0,
-        "y": 1
+        "y": 8
       },
       "id": 2,
       "interval": "5m",
@@ -99,7 +447,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_agent_host",
+          "alias": "$tag_hostname",
           "groupBy": [
             {
               "params": [
@@ -109,7 +457,7 @@
             },
             {
               "params": [
-                "agent_host"
+                "hostname"
               ],
               "type": "tag"
             },
@@ -139,15 +487,9 @@
               },
               {
                 "params": [
-                  "10s"
+                  "5m"
                 ],
-                "type": "derivative"
-              },
-              {
-                "params": [
-                  "*1000"
-                ],
-                "type": "math"
+                "type": "non_negative_derivative"
               }
             ]
           ],
@@ -200,7 +542,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 10
+        "y": 15
       },
       "id": 8,
       "panels": [],
@@ -218,7 +560,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 11
+        "y": 16
       },
       "id": 10,
       "interval": "5m",
@@ -265,7 +607,7 @@
                 "params": [
                   "5m"
                 ],
-                "type": "derivative"
+                "type": "non_negative_derivative"
               },
               {
                 "params": [
@@ -285,7 +627,7 @@
                 "params": [
                   "5m"
                 ],
-                "type": "derivative"
+                "type": "non_negative_derivative"
               },
               {
                 "params": [
@@ -369,7 +711,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 11
+        "y": 16
       },
       "id": 13,
       "interval": "5m",
@@ -543,7 +885,7 @@
     "list": []
   },
   "time": {
-    "from": "now-7d",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {
@@ -574,5 +916,5 @@
   "timezone": "",
   "title": "Subscribers",
   "uid": "6IQCziNmk",
-  "version": 6
+  "version": 10
 }

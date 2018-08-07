@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "5.1.3"
+      "version": "5.2.1"
     },
     {
       "type": "panel",
@@ -46,7 +46,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1531767644654,
+  "iteration": 1533681864799,
   "links": [],
   "panels": [
     {
@@ -105,7 +105,7 @@
           "groupBy": [
             {
               "params": [
-                "$interval"
+                "$__interval"
               ],
               "type": "time"
             }
@@ -185,9 +185,9 @@
             },
             {
               "condition": "AND",
-              "key": "agent_host",
+              "key": "hostname",
               "operator": "=~",
-              "value": "/^$agent_host$/"
+              "value": "/^$hostname$/"
             }
           ]
         }
@@ -275,7 +275,7 @@
           "groupBy": [
             {
               "params": [
-                "$interval"
+                "$__interval"
               ],
               "type": "time"
             }
@@ -355,9 +355,9 @@
             },
             {
               "condition": "AND",
-              "key": "agent_host",
+              "key": "hostname",
               "operator": "=~",
-              "value": "/^$agent_host$/"
+              "value": "/^$hostname$/"
             }
           ]
         }
@@ -417,9 +417,9 @@
         "includeAll": false,
         "label": null,
         "multi": false,
-        "name": "agent_host",
+        "name": "hostname",
         "options": [],
-        "query": "SHOW TAG VALUES ON telegraf WITH KEY = agent_host",
+        "query": "SHOW TAG VALUES ON telegraf WITH KEY = hostname",
         "refresh": 1,
         "regex": "",
         "sort": 0,
@@ -463,5 +463,5 @@
   "timezone": "",
   "title": "Interfaces (MGT)",
   "uid": "2EuGU8Siz",
-  "version": 6
+  "version": 2
 }

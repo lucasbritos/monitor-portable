@@ -1,12 +1,35 @@
 version: '3'
 services:
+
+  elasticsearch:
+    container_name: elasticsearch
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.3.2
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    restart: always
+
+  logstash:
+    container_name: logstash
+    build: logstash/.
+    ports:
+      - "1514:1514/udp"
+    volumes:
+      - ${PWD}/logstash:/config
+    environment:
+      - XPACK_MONITORING_ENABLED=false
+    command: -f /config/conf.d/* --config.reload.automatic
+    restart: always
+
   telegraf:
     container_name: telegraf
     image: "telegraf:latest"
     volumes:
       - ${PWD}/telegraf/mibs:/usr/share/mibs/site
       - ${PWD}/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
-      - ${PWD}/telegraf/telegraf.d:/etc/telegraf/telegraf.d
+      - ${PWD}/telegraf/conf.d:/etc/telegraf/telegraf.d
     command: --config-directory /etc/telegraf/telegraf.d
     restart: always
 
@@ -16,7 +39,7 @@ services:
     environment:
       - INFLUXDB_DB=cadvisor
     volumes:
-      - ${PWD}/influxdb/data:/var/lib/influxdb
+      - influxdata:/var/lib/influxdb
       - ${PWD}/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf
     restart: always
 
@@ -43,7 +66,8 @@ services:
 
 volumes:
   grafana-storage:
-
+  influxdata:
+  esdata:
 
 networks:
   default:

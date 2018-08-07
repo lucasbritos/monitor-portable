@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "5.1.3"
+      "version": "5.2.1"
     },
     {
       "type": "panel",
@@ -52,7 +52,6 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1531767578776,
   "links": [],
   "panels": [
     {
@@ -111,7 +110,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_agent_host",
+          "alias": "$tag_hostname",
           "groupBy": [
             {
               "params": [
@@ -121,7 +120,7 @@
             },
             {
               "params": [
-                "agent_host"
+                "hostname"
               ],
               "type": "tag"
             }
@@ -146,13 +145,7 @@
               }
             ]
           ],
-          "tags": [
-            {
-              "key": "agent_host",
-              "operator": "=~",
-              "value": "/^$agent_host$/"
-            }
-          ]
+          "tags": []
         }
       ],
       "thresholds": [],
@@ -235,7 +228,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_agent_host",
+          "alias": "$tag_hostname",
           "groupBy": [
             {
               "params": [
@@ -245,7 +238,7 @@
             },
             {
               "params": [
-                "agent_host"
+                "hostname"
               ],
               "type": "tag"
             }
@@ -269,13 +262,7 @@
               }
             ]
           ],
-          "tags": [
-            {
-              "key": "agent_host",
-              "operator": "=~",
-              "value": "/^$agent_host$/"
-            }
-          ]
+          "tags": []
         }
       ],
       "thresholds": [],
@@ -357,7 +344,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_agent_host",
+          "alias": "$tag_hostname",
           "groupBy": [
             {
               "params": [
@@ -367,7 +354,7 @@
             },
             {
               "params": [
-                "agent_host"
+                "hostname"
               ],
               "type": "tag"
             }
@@ -391,13 +378,7 @@
               }
             ]
           ],
-          "tags": [
-            {
-              "key": "agent_host",
-              "operator": "=~",
-              "value": "/^$agent_host$/"
-            }
-          ]
+          "tags": []
         }
       ],
       "thresholds": [],
@@ -505,7 +486,7 @@
           "groupBy": [
             {
               "params": [
-                "agent_host"
+                "hostname"
               ],
               "type": "tag"
             }
@@ -541,13 +522,7 @@
               }
             ]
           ],
-          "tags": [
-            {
-              "key": "agent_host",
-              "operator": "=~",
-              "value": "/^$agent_host$/"
-            }
-          ]
+          "tags": []
         }
       ],
       "title": "Uptime",
@@ -685,13 +660,7 @@
               }
             ]
           ],
-          "tags": [
-            {
-              "key": "url",
-              "operator": "=~",
-              "value": "/^$agent_host$/"
-            }
-          ]
+          "tags": []
         }
       ],
       "title": "Ping",
@@ -704,28 +673,7 @@
   "style": "dark",
   "tags": [],
   "templating": {
-    "list": [
-      {
-        "allValue": "",
-        "current": {},
-        "datasource": "${DS_TELEGRAF}",
-        "hide": 0,
-        "includeAll": true,
-        "label": null,
-        "multi": true,
-        "name": "agent_host",
-        "options": [],
-        "query": "SHOW TAG VALUES ON telegraf WITH KEY = agent_host",
-        "refresh": 1,
-        "regex": "",
-        "sort": 0,
-        "tagValuesQuery": "",
-        "tags": [],
-        "tagsQuery": "",
-        "type": "query",
-        "useTags": false
-      }
-    ]
+    "list": []
   },
   "time": {
     "from": "now-30d",
@@ -759,5 +707,5 @@
   "timezone": "",
   "title": "System Availabilty",
   "uid": "tlAHkEImk",
-  "version": 36
+  "version": 4
 }

@@ -1,0 +1,16 @@
+# config file version
+apiVersion: 1
+
+datasources:
+- name: ES-syslog
+  type: elasticsearch
+  access: proxy
+  orgId: 1
+  url: http://elasticsearch:9200
+  database: "[syslog-]YYYY.MM.DD"
+  basicAuth: false
+  withCredentials: false
+  editable: false
+  jsonData:
+    interval: Daily
+    timeField: "@timestamp"
