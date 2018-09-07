@@ -1,2 +1,3 @@
 logstash/conf.d
+telegraf/conf.d
 influxdb/data
