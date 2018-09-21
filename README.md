@@ -2,7 +2,7 @@
 
 Dockerized stack monitoring system for general purposes. Intended to be small and portable.
 
-![Alt text](iamges/stack.PNG?raw=true "Stack")
+![Alt text](images/stack.PNG?raw=true "Stack")
 
 
 - Telegraf: SNMP Polling agent
