@@ -2,6 +2,9 @@
 
 Dockerized stack monitoring system for general purposes. Intended to be small and portable.
 
+![Alt text](iamges/stack.PNG?raw=true "Stack")
+
+
 - Telegraf: SNMP Polling agent
 - Logstash: Procesing agent for syslog, IPFIX, etc
 - InfluxDB: Modern time series database
