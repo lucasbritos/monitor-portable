@@ -25,7 +25,7 @@ services:
 
   telegraf:
     container_name: telegraf
-    image: "telegraf:latest"
+    build: telegraf/.
     volumes:
       - ${PWD}/telegraf/mibs:/usr/share/mibs/site
       - ${PWD}/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
