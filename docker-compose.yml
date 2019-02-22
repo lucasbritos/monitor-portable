@@ -30,6 +30,10 @@ services:
       - ${PWD}/telegraf/mibs:/usr/share/mibs/site
       - ${PWD}/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
       - ${PWD}/telegraf/conf.d:/etc/telegraf/telegraf.d
+      - /var/run/utmp:/var/run/utmp
+      - /proc:/proc
+      - /sys:/sys
+      - /var/run/docker.sock:/var/run/docker.sock 
     command: --config-directory /etc/telegraf/telegraf.d
     restart: always
 
@@ -42,17 +46,6 @@ services:
       - influxdata:/var/lib/influxdb
       - ${PWD}/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf
     restart: always
-
-  cadvisor:
-    image: google/cadvisor
-    container_name: cadvisor
-    command: -storage_driver=influxdb -storage_driver_db=cadvisor -storage_driver_host=influxdb:8086
-    volumes:
-      - /:/rootfs:ro
-      - /var/run:/var/run:rw
-      - /sys:/sys:ro
-      - /var/lib/docker/:/var/lib/docker:ro
-    restart: unless-stopped
 
   grafana:
     container_name: grafana

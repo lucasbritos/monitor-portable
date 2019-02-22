@@ -1,0 +1,7 @@
+
+# Connect to database CLI
+docker exec -it influxdb influx
+
+# Delete data from measurement
+
+DROP SERIES FROM channel

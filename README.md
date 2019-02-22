@@ -10,7 +10,6 @@ Dockerized stack monitoring system for general purposes. Intended to be small an
 - InfluxDB: Modern time series database
 - Elasticsearch: Modern Search-text engine
 - Grafana: Multi-source visualization tool
-- cAdvisor: Monitoring agent for containers and hosts
 
 Pre-requisites:
 - docker
