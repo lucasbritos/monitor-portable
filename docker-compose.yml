@@ -39,9 +39,7 @@ services:
 
   influxdb:
     container_name: influxdb
-    image: "influxdb:latest"
-    environment:
-      - INFLUXDB_DB=cadvisor
+    image: "lucasbritos/influxdb:1.7"
     volumes:
       - influxdata:/var/lib/influxdb
       - ${PWD}/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf
