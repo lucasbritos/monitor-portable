@@ -1,7 +1,6 @@
 #!/bin/bash
 
 
-rm examples/*
 cp conf.d/* examples/
 
 
