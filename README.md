@@ -21,8 +21,8 @@ Pre-requisites:
 
 ### Step 2: Compose
 
-```docker-compose up --no-start-- <br />
-docker-compose start-- <br />```
+```docker-compose up --no-start``` <br />
+docker-compose start``` <br />
 
 ### Step 3: Telegraf config
 
