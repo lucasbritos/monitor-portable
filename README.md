@@ -17,17 +17,12 @@ Pre-requisites:
 
 ### Step 1: Install
 
-git clone https://github.com/lucasbritos/monitor-portable.git
+*git clone https://github.com/lucasbritos/monitor-portable.git*
 
 ### Step 2: Compose
 
-docker-compose up --no-start <br />
-docker-compose start <br />
-
-Starting telegraf ... done <br />
-Starting influxdb ... done <br />
-Starting grafana  ... done <br />
-
+*docker-compose up --no-start* <br />
+*docker-compose start* <br />
 
 ### Step 3: Telegraf config
 
