@@ -22,7 +22,7 @@ Pre-requisites:
 ### Step 2: Compose
 
 ```docker-compose up --no-start``` <br />
-docker-compose start``` <br />
+```docker-compose start``` <br />
 
 ### Step 3: Telegraf config
 
@@ -31,7 +31,7 @@ You have some examples at telegraf/examples <br />
 <br />
 You need to restart telegraf each time you change config<br />
 <br />
-docker-compose restart telegraf<br />
+```docker-compose restart telegraf```<br />
 <br />
 Dont forget to configure snmp community on devices <br />
 
