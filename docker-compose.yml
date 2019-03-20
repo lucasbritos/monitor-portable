@@ -31,15 +31,18 @@ services:
       - ${PWD}/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
       - ${PWD}/telegraf/conf.d:/etc/telegraf/telegraf.d
       - /var/run/utmp:/var/run/utmp
-      - /proc:/proc
+      - /proc:/host/proc
       - /sys:/sys
       - /var/run/docker.sock:/var/run/docker.sock 
+    environment:
+      - HOST_PROC=/host/proc
     command: --config-directory /etc/telegraf/telegraf.d
     restart: always
 
   influxdb:
     container_name: influxdb
-    image: "lucasbritos/influxdb:1.7"
+    image: "influxdb:1.7"
+#    image: "lucasbritos/influxdb:1.7"
     volumes:
       - influxdata:/var/lib/influxdb
       - ${PWD}/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf
