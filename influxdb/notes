@@ -5,3 +5,9 @@ docker exec -it influxdb influx
 # Delete data from measurement
 
 DROP SERIES FROM channel
+
+
+
+## Build w/o sending context (files)
+
+docker build --tag influxdb-test - < Dockerfile

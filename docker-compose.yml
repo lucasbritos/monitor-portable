@@ -39,7 +39,7 @@ services:
 
   influxdb:
     container_name: influxdb
-    image: "lucasbritos/influxdb:1.7"
+    build: influxdb/docker/.
     volumes:
       - influxdata:/var/lib/influxdb
       - ${PWD}/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf
