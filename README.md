@@ -29,6 +29,10 @@ Pre-requisites:
 
 ```git clone https://github.com/lucasbritos/monitor-portable.git```
 
+Generate SSH keys for Ansible
+
+```bash ssh-keygen.sh``` 
+
 ### Step 2: Compose
 
 ```docker-compose up --no-start``` <br />
@@ -62,6 +66,12 @@ You DONT need to restart logstash each time you change config<br />
 Dont forget to configure syslog towards UDP:1514 on devices<br />
 
 ### Step 6: Ansible playbooks
+
+Add public key to devices to be monitored. asnible/keys/id_rsa.pub (generated on Step 1)
+
+i.e Junos device
+
+set system login user lbritos authentication load-key-file id_rsa.pub (you need to copy the file to the device)
 
 Add Ansible playbooks to ansible/playbook folder.
 Modify ansible/crontab file in order to control job schedule (No need to reboot Ansible container)
