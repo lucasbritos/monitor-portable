@@ -2,8 +2,7 @@
 
 Dockerized stack monitoring system for general purposes. Intended to be small and portable.
 
-![Alt text](images/stack.PNG?raw=true "Stack")
-
+<img src="images/stack.PNG" width="522" height="210">
 
 - Telegraf: SNMP Polling agent
 - Logstash: Procesing agent for syslog, IPFIX, etc

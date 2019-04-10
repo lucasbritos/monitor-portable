@@ -2,3 +2,5 @@ logstash/conf.d
 telegraf/conf.d
 influxdb/data
 *.swp
+ansible/playbook
+ansible/crontab

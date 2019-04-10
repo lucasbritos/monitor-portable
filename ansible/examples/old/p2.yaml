@@ -1,0 +1,22 @@
+---
+- name: Execute RPC
+  hosts: 192.168.10.81
+  user: lbritos
+  roles:
+    - Juniper.junos
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: Get interface information
+      juniper_junos_rpc:
+        rpcs: "get-interface-information"
+        formats: "json"
+      register: response
+
+    - set_fact: 
+        parsed: "{{ response.parsed_output }}"
+
+    - name: Print response
+      debug:
+        var: parsed

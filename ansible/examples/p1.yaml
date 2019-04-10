@@ -1,0 +1,44 @@
+---
+- name: Execute RPC
+  hosts: 192.168.10.81
+  user: lbritos
+  roles:
+    - Juniper.junos
+  connection: local
+
+  tasks:
+    - name: Get interface information
+      juniper_junos_rpc:
+        rpcs: "get-interface-information"
+        formats: "json"
+      register: response
+
+    - name: Change variable name
+      set_fact: 
+        parsed: "{{ response.parsed_output }}"
+
+    - name: Include vars of vars.yaml
+      include_vars:
+        file: vars.yaml
+
+
+    - name: Print vars
+      debug:
+        var: influxdb_database_name
+
+
+    - name: Write points into database
+      loop: "{{ parsed | json_query(snmpindex_query) }}"
+      vars:
+        snmpindex_query: "\"interface-information\"[].\"physical-interface\"[].{name:name[0].data,\"snmpindex\":\"snmp-index\"[0].data}"
+      influxdb_write:
+        hostname: "{vars.influxdb_address}}"
+        database_name: "{{vars.influxdb_database_name}}"
+        data_points:
+          - measurement: NatPool
+            tags:
+              host: inventory_hostname
+              ifName: "{{ item.name }}"
+            time: "{{ ansible_date_time.iso8601 }}"
+            fields:
+              snmpindex: "{{ item.snmpindex }}"

@@ -1,0 +1,3 @@
+---
+influxdb_database_name: ansible
+influxdb_address: influxdb
