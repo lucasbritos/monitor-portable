@@ -4,11 +4,22 @@ Dockerized stack monitoring system for general purposes. Intended to be small an
 
 <img src="images/stack.PNG" width="522" height="210">
 
-- Telegraf: SNMP Polling agent
+Inputs:
+
+- SNMP Poll/Traps
+- IPFIX
+- Syslog
+- SSH/Netconf
+- Telemetry / Google protocol buffer (in progress)
+
+Containers:
+
+- Telegraf: Polling agent
 - Logstash: Procesing agent for syslog, IPFIX, etc
 - InfluxDB: Modern time series database
 - Elasticsearch: Modern Search-text engine
 - Grafana: Multi-source visualization tool
+- Ansible: Automation tool. In this case, for SSH/Netconf monitoring.
 
 Pre-requisites:
 - docker
@@ -50,6 +61,12 @@ You DONT need to restart logstash each time you change config<br />
 <br />
 Dont forget to configure syslog towards UDP:1514 on devices<br />
 
+### Step 6: Ansible playbooks
+
+Add Ansible playbooks to ansible/playbook folder.
+Modify ansible/crontab file in order to control job schedule (No need to reboot Ansible container)
+
+See some examples at ansible/examples
 
 #### Useful commands
 
