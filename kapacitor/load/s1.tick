@@ -1,0 +1,9 @@
+dbrp "telegraf"."autogen"
+
+stream
+    |from()
+        .measurement('mem_local')
+    |alert()
+        .crit(lambda: int("used_percent") <  20)
+        // Whenever we get an alert write it to a file.
+        .log('/root/.kapacitor/load/alert.log')

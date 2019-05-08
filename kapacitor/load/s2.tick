@@ -1,0 +1,14 @@
+dbrp "telegraf"."autogen"
+
+batch
+    |query('''
+        SELECT count("exitcode")
+        FROM "docker_container_status"
+        WHERE ("container_status" = 'running')
+    ''')
+        .period(5m)
+        .every(5m)
+        .groupBy(time(5m))
+    |alert()
+        .crit(lambda: "mean" < 70)
+        .log('/tmp/batch_alerts.log')

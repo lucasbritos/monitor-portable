@@ -1,0 +1,3 @@
+kapacitor define cpu_alert -tick cpu_alert.tick
+
+docker exec -it kapacitor /bin/bash

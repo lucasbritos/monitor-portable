@@ -55,14 +55,15 @@ services:
     - grafana-storage:/var/lib/grafana
     restart: always
 
-  kapacitor:
-    container_name: kapacitor
-    image: kapacitor
-    ports:
-    - "9092:9092"
-    volumes:
-    - ${PWD}/kapacitor/kapacitor.conf:/etc/kapacitor/kapacitor.conf:ro
-    restart: always
+#  kapacitor:
+#    container_name: kapacitor
+#    image: kapacitor
+#    ports:
+#    - "9092:9092"
+#    volumes:
+#    - ${PWD}/kapacitor/kapacitor.conf:/etc/kapacitor/kapacitor.conf:ro
+#    
+#    restart: always
 
   ansible:
     container_name: ansible
@@ -71,7 +72,7 @@ services:
       - ${PWD}/ansible/playbook:/etc/ansible/playbook
       - ${PWD}/ansible/hosts:/etc/ansible/hosts
       - ${PWD}/ansible/ansible.cfg:/etc/ansible/ansible.cfg
-      - ${PWD}/ansible/crontab:/etc/crontab
+      - ${PWD}/ansible/crontab/crontab:/etc/crontab
     tty: true
     restart: unless-stopped
 

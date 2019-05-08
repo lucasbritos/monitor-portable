@@ -29,9 +29,9 @@ Pre-requisites:
 
 ```git clone https://github.com/lucasbritos/monitor-portable.git```
 
-Generate SSH keys for Ansible
+Execute first-time script for initial settings (see comments on file)
 
-```bash ssh-keygen.sh``` 
+```bash first-time.sh``` 
 
 ### Step 2: Compose
 
