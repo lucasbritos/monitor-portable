@@ -4,3 +4,4 @@ influxdb/data
 *.swp
 ansible/playbook
 ansible/crontab
+ansible/docker/keys

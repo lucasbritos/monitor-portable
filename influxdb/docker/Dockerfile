@@ -1,7 +1,7 @@
 FROM golang:1.11 as builder
 RUN go get -u github.com/golang/dep/...
 
-RUN git clone https://github.com/influxdata/influxdb.git && cd influxdb && git checkout 1.7 \
+RUN git clone https://github.com/influxdata/influxdb.git && cd influxdb && git checkout 1.8 \
     && mkdir -p /go/src/github.com/influxdata/influxdb && cp -r ./* /go/src/github.com/influxdata/influxdb
 
 #RUN go get -u github.com/influxdata/influxdb
@@ -22,6 +22,7 @@ VOLUME /var/lib/influxdb
 
 COPY entrypoint.sh /entrypoint.sh
 COPY init-influxdb.sh /init-influxdb.sh
+
 
 RUN ["chmod", "+x", "/entrypoint.sh"]
 RUN ["chmod", "+x", "/init-influxdb.sh"]
