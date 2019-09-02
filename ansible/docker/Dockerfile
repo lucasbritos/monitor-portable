@@ -2,6 +2,8 @@ FROM willhallonline/ansible:ubuntu-16.04
 
 RUN apt-get update && apt-get install -y cron
 
+RUN pip install --ignore-installed PyYAML
+
 RUN pip install junos-eznc jxmlease jmespath influxdb
 
 RUN pip install jinja2 -U

@@ -41,7 +41,7 @@ services:
     container_name: influxdb
     build: influxdb/docker/.
     volumes:
-      - influxdata:/var/lib/influxdb
+      - influxdata_1:/var/lib/influxdb
       - ${PWD}/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf
     restart: always
 
@@ -80,7 +80,7 @@ services:
 
 volumes:
   grafana-storage:
-  influxdata:
+  influxdata_1:
   esdata:
 
 networks:
